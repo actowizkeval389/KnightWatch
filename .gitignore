@@ -1,0 +1,14 @@
+# Ignore Python bytecode files
+__pycache__/
+
+# Ignore environment variable file
+.env
+
+# Ignore any virtual environment folder (if exists)
+venv/
+
+# Ignore any dashboard version folders if they aren't needed in the repo
+dashboard v1/
+
+# Ignore run script (if it's for local use only)
+run_main.py

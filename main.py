@@ -1,5 +1,4 @@
 import streamlit as st
-import pymysql
 import pandas as pd
 from datetime import datetime, timedelta
 
