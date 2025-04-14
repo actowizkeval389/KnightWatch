@@ -1,9 +1,23 @@
+import pymysql
 import streamlit as st
 import pandas as pd
 from datetime import datetime, timedelta
 
-# Database Connection
-from credentials import get_db_connection
+
+def get_db_connection():
+    # Fetch database credentials from environment variables
+    host = "15.235.85.189"
+    user = "root"
+    password = "actowiz"
+    database = "knightwatch"
+
+    return pymysql.connect(
+        host=host,
+        user=user,
+        password=password,
+        database=database,
+        cursorclass=pymysql.cursors.DictCursor
+    )
 
 # Fetch Unique IPs
 def fetch_unique_ips():
